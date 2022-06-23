@@ -1,0 +1,31 @@
+{% extends "base/base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="m-4">
+            <div class="accordion" id="myAccordion">
+                {% for word in words %}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="heading-{{ word.id }}">
+                            <button type="button" class="accordion-button collapsed" data-bs-toggle="collapse"
+                                    data-bs-target="#collapse-{{ word.id }}">
+                                <strong>{{ word.word }}</strong>
+                            </button>
+                        </h2>
+                        <div id="collapse-{{ word.id }}" class="accordion-collapse collapse"
+                             data-bs-parent="#myAccordion">
+                            <div class="card-body">
+                                <p>{{ word.definition }}</p>
+                                <p>{{ word.example }}</p>
+                                <p>
+                                    <button type="button" class="btn-sm btn-success"
+                                            onclick="text_speach('{{ word.word }}')">Sound
+                                    </button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
