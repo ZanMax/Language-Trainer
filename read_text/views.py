@@ -2,7 +2,6 @@ from django.shortcuts import render
 from django.views import View
 
 
-class ConditionsView(View):
-
+class ReadTextView(View):
     def get(self, request):
-        return render(request, "conditions/index.html")
+        return render(request, "read_text/index.html")

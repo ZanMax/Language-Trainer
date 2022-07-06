@@ -21,4 +21,9 @@ urlpatterns = [
     path('', include('main.urls')),
     path('words/', include('words.urls')),
     path('irregular-verbs/', include('irregular_verbs.urls')),
+    path('сonditions/', include('сonditions.urls')),
+    path('idioms/', include('idioms.urls')),
+    path('tenses/', include('english_tenses.urls')),
+    path('passive-voice/', include('passive_voice.urls')),
+    path('read-text/', include('read_text.urls')),
 ]
