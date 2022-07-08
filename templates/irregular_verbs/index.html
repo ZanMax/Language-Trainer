@@ -1,6 +1,76 @@
 {% extends "base/base.html" %}
+{% block style %}
+    <style>
+        .search-input {
+            margin-top: 10px;
+        }
+
+        #myTable tr.header, #myTable tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+{% endblock %}
 {% block content %}
     <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <strong>Present:</strong> (I) am, (she, he, it) is, (you, we, they) are
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <strong>Past:</strong> (I, she, he, it) was, (you, we, they) were
+                </div>
+            </div>
 
+            <div class="input-group mb-3 search-input">
+                <input type="text" class="form-control" placeholder="word" aria-label="Recipient's username"
+                       aria-describedby="basic-addon2" id="myInput" onkeyup="myFunction()">
+            </div>
+
+            <div class="table-responsive">
+                <table id="myTable" class="table">
+                    <tr class="header">
+                        <th style="width:25%;">Infinitive</th>
+                        <th style="width:25%;">Simple Past</th>
+                        <th style="width:25%;">Past participle</th>
+                        <th style="width:25%;">Translation</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
+{% endblock %}
+{% block script %}
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
 {% endblock %}

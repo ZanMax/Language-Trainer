@@ -41,6 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'words',
     'main',
+    'read_text',
+    'english_tenses',
+    'idioms',
+    'irregular_verbs',
+    'passive_voice',
+    'сonditions',
 ]
 
 MIDDLEWARE = [

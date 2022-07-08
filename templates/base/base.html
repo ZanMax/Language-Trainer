@@ -20,8 +20,8 @@
         }
 
         .container {
-            padding: 30px;
-            margin: 20px;
+            padding: 35px;
+            margin: 25px;
         }
 
         @media (min-width: 768px) {
@@ -30,6 +30,9 @@
             }
         }
     </style>
+    {% block style %}
+
+    {% endblock %}
 </head>
 <body class="d-flex flex-column h-100">
 
@@ -104,4 +107,7 @@
         window.speechSynthesis.speak(speech);
     }
 </script>
+{% block script %}
+
+{% endblock %}
 </html>
