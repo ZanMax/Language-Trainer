@@ -1,3 +1,4 @@
 from django.contrib import admin
+from idioms.models import Idioms
 
-# Register your models here.
+admin.site.register(Idioms)

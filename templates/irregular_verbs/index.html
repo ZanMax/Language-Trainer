@@ -30,23 +30,19 @@
             <div class="table-responsive">
                 <table id="myTable" class="table">
                     <tr class="header">
-                        <th style="width:25%;">Infinitive</th>
-                        <th style="width:25%;">Simple Past</th>
-                        <th style="width:25%;">Past participle</th>
-                        <th style="width:25%;">Translation</th>
+                        <th>Infinitive</th>
+                        <th>Simple Past</th>
+                        <th>Past participle</th>
+                        <th>Translation</th>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
-                        <td>0</td>
-                    </tr>
+                    {% for verb in irregular_verbs %}
+                        <tr>
+                            <td>{{ verb.first_form }}</td>
+                            <td>{{ verb.second_form }}</td>
+                            <td>{{ verb.third_form }}</td>
+                            <td>{{ verb.translation }}</td>
+                        </tr>
+                    {% endfor %}
                 </table>
             </div>
         </div>
