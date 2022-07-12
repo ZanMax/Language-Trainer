@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'irregular_verbs',
     'passive_voice',
     'сonditions',
+    'collocation',
 ]
 
 MIDDLEWARE = [
