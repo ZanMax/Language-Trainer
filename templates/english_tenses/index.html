@@ -1,6 +1,73 @@
 {% extends "base/base.html" %}
 {% block content %}
     <div class="container">
-
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Past</th>
+                <th scope="col">Present</th>
+                <th scope="col">Future</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Simple</th>
+                <td>
+                    I worked yesterday<br>
+                    I didn't work yesterday<br>
+                    Did I work yesterday?<br>
+                </td>
+                <td>
+                    I work every day<br>
+                    I don't work every day<br>
+                    Do I work every day ?<br>
+                </td>
+                <td>
+                    I will work tomorrow<br>
+                    I won't work tomorrow<br>
+                    Will I work tomorrow?<br>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Continuous</th>
+                <td>
+                    I was working at 6 o'clock<br>
+                    I wasn't working at 6 o'clock<br>
+                    Was I working at 6 o'clock?<br>
+                </td>
+                <td>
+                    I am working now<br>
+                    I am not working now<br>
+                    Am I working now?<br>
+                </td>
+                <td>
+                    I will be working at 7 o'clock<br>
+                    I won't be working at 7 o'clock<br>
+                    Will I be working at 7 o'clock?<br>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Perfect</th>
+                <td>
+                    I had already worked by six oclock<br>
+                    I hadn't already worked by six oclock<br>
+                    Had I already worked by six oclock?<br>
+                </td>
+                <td>
+                    I have finished working<br>
+                    I haven't finished working<br>
+                    Have I finished working?<br>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">Perfect Continuous</th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 {% endblock %}
