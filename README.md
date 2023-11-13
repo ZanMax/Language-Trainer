@@ -25,11 +25,11 @@ DB_PORT=<db_port>
 ## Deployment
 ### Build
 ```
-docker build -t hub.docker.bar/max/learn:0.0.1 .
+docker build -t 10.0.0.200:5000/enlearn:0.0.1 .
 ```
 ### Push
 ```
-docker push hub.docker.bar/max/learn:0.0.1
+docker push 10.0.0.200:5000/enlearn:0.0.1
 ```
 ### Deploy
 ```

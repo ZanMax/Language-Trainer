@@ -21,12 +21,9 @@ spec:
       labels:
         app: learn
     spec:
-      imagePullSecrets:
-      - name: regcred
       containers:
       - name: learn
-        image: hub.docker.bar/max/learn-arm64:0.0.1
-        # image: hub.docker.bar/learn:453
+        image: 10.0.0.200:5000/enlearn:0.0.1
         imagePullPolicy: Always
         env:
         - name: APP_TYPE

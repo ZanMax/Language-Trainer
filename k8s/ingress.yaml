@@ -7,7 +7,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: en.db.rv.ua
+  - host: en.home
     http:
       paths:
       - path: /
